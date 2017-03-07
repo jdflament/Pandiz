@@ -44,5 +44,13 @@ This content can be changed in <code>/app/Views/Welcome/SubPage.php</code>');
             ->shares('title', __('Subpage'))
             ->withWelcomeMessage($message);
     }
+    
+    public function about()
+    {
+        return View::make('Welcome/About')
+            ->shares('title', 'About')
+            ->with('nom','Clément');
+        
+    }
 
 }
