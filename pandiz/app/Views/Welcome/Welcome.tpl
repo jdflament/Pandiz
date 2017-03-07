@@ -8,6 +8,6 @@
     {{ __('Open subpage') }}
 </a>
 
-<a class="btn btn-md btn-success" href="{{ site_url('about') }}">
+<a class="btn btn-md btn-success" href="{{ site_url('About') }}">
     {{ __('Open about') }}
 </a>

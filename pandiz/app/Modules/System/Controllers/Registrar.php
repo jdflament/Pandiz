@@ -37,7 +37,7 @@ class Registrar extends BackendController
             'realname' => 'required|min:6|valid_name',
             'username' => 'required|min:6|unique:users',
             'email'    => 'required|email|unique:users',
-            'password' => 'required|confirmed|strong_password'
+            'password' => 'required|confirmed'
         );
 
         $messages = array(
