@@ -14,5 +14,6 @@
 Route::get('/',       'Welcome@index');
 Route::get('subpage', 'Welcome@subPage');
 
-Route::get('about', 'Welcome@about');
+Route::get('About', 'Welcome@about');
+route::get('/param/{id}', 'Welcome@param')->where('id','[0-9]+');
 /** End default Routes */

@@ -79,4 +79,16 @@ class User extends BaseModel implements UserInterface, RemindableInterface
         return false;
     }
 
+    public function suit() {
+        return $this->belongsToMany("App\Models\User", "suit", "suiveur_id", "suivi_id");
+    }
+
+    public function estSuiviPar() {
+        return $this->belongsToMany("App\Models\User", "suit", "suivi_id", "suiveur_id");
+    }
+
+    public function playlists() {
+        return $this->hasMany("App\Models\Playlist", "utilisateur_id");
+    }
+
 }
