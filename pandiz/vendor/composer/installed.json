@@ -1230,64 +1230,6 @@
         "homepage": "https://symfony.com"
     },
     {
-        "name": "nova-framework/system",
-        "version": "v3.77.6",
-        "version_normalized": "3.77.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/nova-framework/system",
-            "reference": "9c94facb6e42dd3f369b7c82954c5f6e17fd9278"
-        },
-        "require": {
-            "doctrine/inflector": "1.1.*",
-            "filp/whoops": "^2.1",
-            "monolog/monolog": "^1.19",
-            "nesbot/carbon": "^1.21",
-            "patchwork/utf8": "~1.2",
-            "php": ">=5.5.0",
-            "predis/predis": "1.1.*",
-            "stack/builder": "^1.0",
-            "swiftmailer/swiftmailer": "^5.4",
-            "symfony/console": "3.1.*",
-            "symfony/finder": "3.1.*",
-            "symfony/http-foundation": "3.1.*",
-            "symfony/http-kernel": "3.1.*",
-            "symfony/process": "3.1.*",
-            "symfony/routing": "3.1.*",
-            "symfony/var-dumper": "3.1.*"
-        },
-        "time": "2017-03-02 16:57:25",
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Nova\\": "src/"
-            },
-            "files": [
-                "scripts/helpers.php"
-            ]
-        },
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "David Carr",
-                "email": "dave@daveismyname.com",
-                "homepage": "http://daveismyname.com",
-                "role": "Developer"
-            },
-            {
-                "name": "Virgil-Adrian Teaca",
-                "email": "virgil@giulianaeassociati.com",
-                "homepage": "http://giulianaeassociati.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Framework for PHP 5.5+",
-        "homepage": "https://github.com/nova-framework/system"
-    },
-    {
         "name": "almasaeed2010/adminlte",
         "version": "v2.3.11",
         "version_normalized": "2.3.11.0",
@@ -1381,5 +1323,63 @@
             "responsive",
             "web"
         ]
+    },
+    {
+        "name": "nova-framework/system",
+        "version": "v3.77.6",
+        "version_normalized": "3.77.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nova-framework/system",
+            "reference": "9c94facb6e42dd3f369b7c82954c5f6e17fd9278"
+        },
+        "require": {
+            "doctrine/inflector": "1.1.*",
+            "filp/whoops": "^2.1",
+            "monolog/monolog": "^1.19",
+            "nesbot/carbon": "^1.21",
+            "patchwork/utf8": "~1.2",
+            "php": ">=5.5.0",
+            "predis/predis": "1.1.*",
+            "stack/builder": "^1.0",
+            "swiftmailer/swiftmailer": "^5.4",
+            "symfony/console": "3.1.*",
+            "symfony/finder": "3.1.*",
+            "symfony/http-foundation": "3.1.*",
+            "symfony/http-kernel": "3.1.*",
+            "symfony/process": "3.1.*",
+            "symfony/routing": "3.1.*",
+            "symfony/var-dumper": "3.1.*"
+        },
+        "time": "2017-03-02 16:57:25",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Nova\\": "src/"
+            },
+            "files": [
+                "scripts/helpers.php"
+            ]
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "David Carr",
+                "email": "dave@daveismyname.com",
+                "homepage": "http://daveismyname.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Virgil-Adrian Teaca",
+                "email": "virgil@giulianaeassociati.com",
+                "homepage": "http://giulianaeassociati.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Framework for PHP 5.5+",
+        "homepage": "https://github.com/nova-framework/system"
     }
 ]
