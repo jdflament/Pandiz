@@ -52,15 +52,19 @@ echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
 </head>
 <body style='padding-top: 28px;'>
 
-<nav class="navbar navbar-default navbar-xs navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <?= $langMenuLinks; ?>
-            </ul>
-        </div>
+<nav class="navbar" role="navigation">
+    <div id="navbar-content">
+        <a href="" id="menu-icon"><img src="../../Bootstrap/Assets/images/menu.png" /></a>
+        <a href="" id="login-icon"><img src="../../Bootstrap/Assets/images/login.png" /></a>
     </div>
 </nav>
+    
+<div id="homepage-banner">
+    <div id="homepage-banner-content">
+        <h1 id="homepage-banner-title">Pandiz</h1>
+        <p id="homepage-banner-subtitle">Partagez, Écoutez, Partagez</p>
+    </div>
+</div>
 
 <?= isset($afterBody) ? $afterBody : ''; // Place to pass data / plugable hook zone ?>
 
