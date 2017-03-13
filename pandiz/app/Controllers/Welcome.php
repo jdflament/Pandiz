@@ -64,7 +64,7 @@ this content can be changed in <code>/app/Views/Welcome/Welcome.php</code>');
            Input::file('chanson')->isValid()){
             
             $file = Input::file('chanson')->getClientOriginalName();
-            $f = Input::file('chanson')->move('assets/images'.Auth::user()->username);
+            $f = Input::file('chanson')->move('assets/images/'.Auth::user()->username,$file);
             
             $c = new Chanson();
             $c->nom = Input::get('nom');

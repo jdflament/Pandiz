@@ -1,4 +1,15 @@
 <?php
+Assets::js([
+    'https://code.jquery.com/jquery-1.12.4.min.js',
+    vendor_url('dist/js/bootstrap.min.js', 'twbs/bootstrap'),
+]);
+
+echo isset($js) ? $js : ''; // Place to pass data / plugable hook zone
+
+echo isset($footer) ? $footer : ''; // Place to pass data / plugable hook zone
+?>
+
+<?php
 /**
  * Default Layout - a Layout similar with the classic Header and Footer files.
  */
@@ -54,9 +65,11 @@ echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
 <?= isset($afterBody) ? $afterBody : ''; // Place to pass data / plugable hook zone ?>
 
 <div class="container">
-    <p>
-        <img src='<?= theme_url('images/nova.png', 'Bootstrap'); ?>' alt='<?= Config::get('app.name', SITETITLE); ?>'>
-    </p>
+    <audio id="player" controls="controls">
+<!--          <source id="ogg_src" src="lib/audio/barger01.ogg" type="audio/ogg" />
+          <source id="mp3_src" src="lib/audio/barger01.mp3" type="audio/mp3" />-->
+          Your browser does not support the audio element.
+    </audio>
 
     <?= $content; ?>
 </div>
@@ -77,17 +90,6 @@ echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
         </div>
     </div>
 </footer>
-
-<?php
-Assets::js([
-    'https://code.jquery.com/jquery-1.12.4.min.js',
-    vendor_url('dist/js/bootstrap.min.js', 'twbs/bootstrap'),
-]);
-
-echo isset($js) ? $js : ''; // Place to pass data / plugable hook zone
-
-echo isset($footer) ? $footer : ''; // Place to pass data / plugable hook zone
-?>
 
 <!-- DO NOT DELETE! - Forensics Profiler -->
 
