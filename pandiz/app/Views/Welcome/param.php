@@ -1,2 +1,2 @@
 hop 
-<?= $id; ?>
+<?= $chanson->nom; ?>
