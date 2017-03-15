@@ -50,7 +50,7 @@ Assets::css([
 echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
 ?>
 </head>
-<body style='padding-top: 28px;'>
+<body style="padding-top:0px;">
 
 <nav class="navbar" role="navigation">
     <div id="navbar-content">
@@ -70,8 +70,6 @@ echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
 
 <div class="container">
     <audio id="player" controls="controls">
-<!--          <source id="ogg_src" src="lib/audio/barger01.ogg" type="audio/ogg" />
-          <source id="mp3_src" src="lib/audio/barger01.mp3" type="audio/mp3" />-->
           Your browser does not support the audio element.
     </audio>
 
