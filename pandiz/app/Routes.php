@@ -11,10 +11,10 @@
 /** Define static routes. */
 
 // The default Routing
-Route::get('/',       'Welcome@index');
+Route::get('/', 'Welcome@index');
 Route::get('subpage', 'Welcome@subPage');
 
-Route::get('About', 'Welcome@about');
+Route::get('about', 'Welcome@about');
 route::get('/param/{id}', 'Welcome@param')->where('id','[0-9]+');
 
 //creation upload
