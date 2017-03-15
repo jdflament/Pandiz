@@ -12,8 +12,8 @@ body {
 
 .navbar {
     width: 100%;
-    background-color: #E8D934;
-    height: 80px;
+    background-color: #F3D301;
+    height: 60px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -38,16 +38,32 @@ body {
 }
 
 #homepage-banner-content {
-    padding-top : 32vh;
+    padding-top : 35vh;
     padding-bottom: 8vh;
     text-align: center;
 }
 
 #homepage-banner-title {
-    color: #E8D934;
+    color: #F3D301;
+    font-size: 5rem;
 }
 
 #homepage-banner-subtitle {
     color: white;
     text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#menu-icon {
+    width: 35px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+#login-icon {
+    width: 35px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 50px;
 }

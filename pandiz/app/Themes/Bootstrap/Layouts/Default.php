@@ -54,15 +54,15 @@ echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
 
 <nav class="navbar" role="navigation">
     <div id="navbar-content">
-        <a href="" id="menu-icon"><img src="../../Bootstrap/Assets/images/menu.png" /></a>
-        <a href="" id="login-icon"><img src="../../Bootstrap/Assets/images/login.png" /></a>
+        <a href="" ><img id="menu-icon" src="<?= theme_url('images/menu.png', 'Bootstrap'); ?>" /></a>
+        <a href="" ><img id="login-icon" src="<?= theme_url('images/login.png', 'Bootstrap'); ?>" /></a>
     </div>
 </nav>
     
 <div id="homepage-banner">
     <div id="homepage-banner-content">
         <h1 id="homepage-banner-title">Pandiz</h1>
-        <p id="homepage-banner-subtitle">Partagez, Écoutez, Partagez</p>
+        <p id="homepage-banner-subtitle">Partagez, Écoutez, Appréciez</p>
     </div>
 </div>
 
