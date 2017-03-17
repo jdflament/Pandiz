@@ -61,15 +61,20 @@ this content can be changed in <code>/app/Views/Welcome/Welcome.php</code>');
         if(Input::has('nom') && 
            Input::has('style') && 
            Input::hasFile('chanson') && 
-           Input::file('chanson')->isValid()){
+           Input::file('chanson')->isValid() && 
+           Input::hasFile('pochette') && 
+           Input::file('pochette')->isValid()){
             
             $file = Input::file('chanson')->getClientOriginalName();
-            $f = Input::file('chanson')->move('assets/images/'.Auth::user()->username,$file);
+            $f = Input::file('chanson')->move('assets/music/'.Auth::user()->username,$file);
+            $file2 = Input::file('pochette')->getClientOriginalName();
+            $f2 = Input::file('pochette')->move('assets/images/'.Auth::user()->username,$file2);
             
             $c = new Chanson();
             $c->nom = Input::get('nom');
             $c->style = Input::get('style');
             $c->fichier = "/".$f;
+            $c->fichier2 = "/".$f2;
             $c->utilisateur_id = Auth::id();
             $c->duree = "";
             $c->post_date = date('Y-m-d h:i:s');
