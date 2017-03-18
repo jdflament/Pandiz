@@ -127,5 +127,12 @@ This content can be changed in <code>/app/Views/Welcome/SubPage.php</code>');
             ->with('chanson', $c);
         
     }
+    
+     public function profil()
+    {
+        return View::make('Welcome/profil')
+            ->shares('title', 'profil');
+        
+    }
 
 }

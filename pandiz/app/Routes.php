@@ -17,6 +17,9 @@ Route::get('subpage', 'Welcome@subPage');
 Route::get('about', 'Welcome@about');
 route::get('/param/{id}', 'Welcome@param')->where('id','[0-9]+');
 
+//Mon profil
+Route::get('/profil', 'Welcome@profil');
+
 //creation upload
 Route::get("/chanson/nouvelle", "Welcome@formupload");
 Route::post("/chanson/cree", "Welcome@creechanson");

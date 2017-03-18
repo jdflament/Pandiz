@@ -22,4 +22,16 @@ $(document).ready(function() {
     $(document).on('click', '.menu-button', function() {
         $("#menu-open").addClass('displaynone'); 
     });
+    
+    $(document).on('click', '.listen', function() {
+        $("#player").removeClass('displaynone');
+    });
 });
+
+// RECUPARATION NOM SELECTION
+
+function recup() {
+    var select = document.getElementById('select-filter');
+    var paragraph = document.getElementById('le-titre');
+    paragraph.innerHTML=select.value;
+}

@@ -37,7 +37,7 @@ $langMenuLinks = ob_get_clean();
 <html lang="<?= $language; ?>">
 <head>
     <meta charset="utf-8">
-    <title><?= $title .' - ' .Config::get('app.name', SITETITLE); ?></title>
+    <title>Pandiz</title>
 <?php
 echo isset($meta) ? $meta : ''; // Place to pass data / plugable hook zone
 
@@ -72,22 +72,14 @@ echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
     </div>
 </div>
     
-<div id="homepage-banner">
-    <div id="homepage-banner-content">
-        <h1 id="homepage-banner-title">Pandiz</h1>
-        <p id="homepage-banner-subtitle">Partagez, Écoutez, Appréciez</p>
-    </div>
-</div>
+
 
 <?= isset($afterBody) ? $afterBody : ''; // Place to pass data / plugable hook zone ?>
 
-<div class="container">
-    <audio id="player" controls="controls">
+    <?= $content; ?>
+    <audio id="player" class="displaynone" controls="controls">
           Your browser does not support the audio element.
     </audio>
-
-    <?= $content; ?>
-</div>
 
 <footer class="footer">
     <img id="logo-pandiz-footer" src="<?= theme_url('images/logo-pandiz-black.png', 'Bootstrap'); ?>" alt="logo-pandiz" />

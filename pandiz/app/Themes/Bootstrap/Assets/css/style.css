@@ -72,6 +72,18 @@ body {
     width: 50px;
 }
 
+/******************************* AUDIO PLAYER *******************************/
+
+#player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5000;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
 /****************************************** MENU OPEN *****************************************/
 
 #menu-open {
@@ -122,4 +134,157 @@ body {
     margin-top: 10px;
     margin-left: 50px;
     cursor: pointer;
+}
+
+/********************************** SELECTS DROPDOWN **********************************/
+
+.section-select select {
+    border-radius: 3px;
+    padding: 5px 32px 5px 6px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    background-color: rgba(255,255,255,0.1);
+    color: black;
+}
+
+#select-items {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#le-titre {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 2.1rem;
+    width: 250px;
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+.section-select{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.section-select .icon-chevron-down {
+    top: 50%;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: black;
+    width: 12px;
+    height: 12px;
+}
+
+.icon-chevron-down {
+    color: black;
+}
+
+select {
+    -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none; 
+}
+
+/****************************** MUSICS ******************************/
+
+#table-music {
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    margin-bottom: 25px;
+}
+
+.table-music-headers {
+    background-color: #F3D301;
+    height: 40px;
+    padding-left: 10px;
+}
+
+#table-music-date {
+    width: 20%;
+}
+
+#table-music-titre {
+    width: 50%;
+}
+
+#table-music-actions {
+    width: 30%;
+}
+
+.table-music-song {
+    background-color: #F2F2F2;
+    height: 200px;
+    border-bottom: 1px solid #F3D301;
+    transition: background-color ease-in-out 200ms;
+}
+
+.table-music-song:hover {
+    background-color: #EFEBBC;
+}
+
+.song-post-date-content {
+    border: 1px solid red;
+}
+
+.album-cover {
+    margin-right: 25px;
+}
+
+.table-music-date-content {
+    width: 20%;
+}
+
+.table-music-titre-content {
+    width: 50%;
+}
+
+.song-post-date {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-music-actions-content {
+    width: 30%;
+}
+
+.album-cover-content {
+    width: 30%;
+    float: left;
+}
+
+.song-user-content {
+    text-align: left;
+    width: 70%;
+    float: right;
+    margin-top: 25px;
+}
+
+.artist-username {
+    font-size: 1.9rem;
+}
+
+.song-name {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+.song-duration {
+    font-size: 1.5rem;
+    margin-top: 40px;
+}
+
+.fa-play {
+    color: black;
+}
+
+.fa-pause {
+    margin-left: 15px;
+    color: black;
 }
