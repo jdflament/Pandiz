@@ -11,6 +11,7 @@ namespace App\Controllers;
 use App\Core\Controller;
 
 use App\Models\Chanson;
+use App\Models\User;
 use Nova\Support\Facades\Auth;
 use Nova\Support\Facades\Input;
 use Nova\Support\Facades\Redirect;
@@ -31,7 +32,11 @@ class Welcome extends Controller
         $message = __('Hello, welcome from the welcome controller! <br/>
 this content can be changed in <code>/app/Views/Welcome/Welcome.php</code>');
         
-        $all = Chanson::all();
+        if (!isset($_POST['style']) || $_POST['style']=="tous") {
+            $all = Chanson::all();
+        } else {
+            
+        $all = Chanson::where('style', '=', $_POST['style'])->take(10)->get();
         
         /*$c = new Chanson();
         $c->nom = "Reminder";
@@ -41,13 +46,16 @@ this content can be changed in <code>/app/Views/Welcome/Welcome.php</code>');
         $c->style = "Pop";
         $c->utilisateur_id = 1;
         $c->save();*/
-        
+        }
         
 
         return View::make('Welcome/Welcome')
             ->shares('title', __('Welcome'))
             ->with('welcomeMessage', $message)
-            ->with('all', $all);
+            ->with('all', $all)
+            ->with('style',Input::get('style'));
+        
+        
     }
     
     public function formupload()
@@ -128,10 +136,15 @@ This content can be changed in <code>/app/Views/Welcome/SubPage.php</code>');
         
     }
     
-     public function profil()
+     public function profil($id)
     {
+         $u = User::find($id);
+        if($u==false)
+            return View::make('Error/404')
+                ->shares('title', 'non trouve');
         return View::make('Welcome/profil')
             ->shares('title', 'profil');
+/*            ->with('chanson', $c);*/
         
     }
 

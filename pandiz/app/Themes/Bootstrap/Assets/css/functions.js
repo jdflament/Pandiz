@@ -35,3 +35,6 @@ function recup() {
     var paragraph = document.getElementById('le-titre');
     paragraph.innerHTML=select.value;
 }
+$(document).ready(function() {
+    recup();
+});

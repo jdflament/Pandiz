@@ -66,7 +66,6 @@ echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
         <a class="menu-button" href="/">ACCUEIL</a>
         <a class="menu-button" href="">MON PROFIL</a>
         <a class="menu-button" href="">MA PLAYLIST</a>
-        <a class="menu-button" href="">FAQ</a>
         <a class="menu-button" href="">CONTACT</a>
         <a class="menu-button" href="/about">À PROPOS</a>
     </div>
