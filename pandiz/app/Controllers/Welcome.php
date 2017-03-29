@@ -48,7 +48,6 @@ this content can be changed in <code>/app/Views/Welcome/Welcome.php</code>');
         $c->save();*/
         }
         
-
         return View::make('Welcome/Welcome')
             ->shares('title', __('Welcome'))
             ->with('welcomeMessage', $message)
@@ -60,6 +59,7 @@ this content can be changed in <code>/app/Views/Welcome/Welcome.php</code>');
     
     public function formupload()
     {
+
         return View::make('Welcome/formupload')
             ->shares('title', 'nouvelle');
     }
