@@ -27,4 +27,6 @@ Route::post("playlist/cree", "Welcome@creeplaylist");
 //creation upload
 Route::get("/chanson/nouvelle", "Welcome@formupload");
 Route::post("/chanson/cree", "Welcome@creechanson");
+Route::post("/avatar/cree", "Welcome@avatar");
+Route::post("/banner/cree", "Welcome@banner");
 /** End default Routes */

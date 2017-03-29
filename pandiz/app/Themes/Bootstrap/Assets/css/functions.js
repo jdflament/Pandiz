@@ -26,6 +26,17 @@ $(document).ready(function() {
     $(document).on('click', '.listen', function() {
         $("#player").removeClass('displaynone');
     });
+    
+    
+    $('#files-photo').change(function() {
+        $('#formavatar').submit();
+    });
+    
+    $('#files-banner').change(function() {
+        $('#formbanner').submit();
+    });
+
+    
 });
 
 // RECUPARATION NOM SELECTION
