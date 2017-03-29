@@ -12,6 +12,7 @@ use App\Core\Controller;
 
 use App\Models\Chanson;
 use App\Models\User;
+use App\Models\Playlist;
 use Nova\Support\Facades\Auth;
 use Nova\Support\Facades\Input;
 use Nova\Support\Facades\Redirect;
@@ -136,16 +137,37 @@ This content can be changed in <code>/app/Views/Welcome/SubPage.php</code>');
         
     }
     
-     public function profil($id)
-    {
-         $u = User::find($id);
+     public function utilisateur($id) {
+        $u = User::find($id);
         if($u==false)
             return View::make('Error/404')
                 ->shares('title', 'non trouve');
-        return View::make('Welcome/profil')
-            ->shares('title', 'profil');
-/*            ->with('chanson', $c);*/
+        $playlists =
+            Playlist::whereRaw('utilisateur_id=?', array($id))->get();
+         $all =
+             Chanson::whereRaw('utilisateur_id=?', array($id))->get();
+         return View::make('Welcome/utilisateur')
+             ->shares('title', 'About')
+             ->with('user', $u)
+             ->with('all', $all)
+             ->with('playlists', $playlists);
         
+    }
+    
+    public function creeplaylist() {
+        $p = new Playlist();
+        $p->nom = Input::get('playlist');
+        $p->utilisateur_id = Auth::id();
+        $p->save();
+        
+        
+        if (Request::ajax()) {
+            $playlists =
+                Playlist::whereRaw('utilisateur_id=?', array(Auth::id()))->get();
+            return View::fetch('Welcome/playlists',
+                array('playlists' => $playlists));
+            
+        }
     }
 
 }
