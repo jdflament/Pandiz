@@ -186,6 +186,17 @@ This content can be changed in <code>/app/Views/Welcome/SubPage.php</code>');
         
     }
     
+    
+    public function addtoplaylist($plid, $chid) {
+        $pl = Playlist::find($plid);
+        $pl->chansons()->attach($chid);
+        
+        foreach($pl->chansons as $c)
+        echo $plid." ".$chid;
+        die(1);
+    }
+    
+    
     public function playlist()
     {
         return View::make('Welcome/playlist')

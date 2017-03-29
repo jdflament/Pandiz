@@ -434,6 +434,7 @@ select {
     margin-left: 90px;
     margin-right: 90px;
     cursor: pointer;
+    border-bottom: 1px solid transparent;
     transition: all 150ms ease-in;
 }
 
@@ -447,6 +448,7 @@ select {
     margin-left: 90px;
     margin-right: 90px;
     cursor: pointer;
+    border-bottom: 1px solid transparent;
     transition: all 150ms ease-in;
 }
 
@@ -460,6 +462,7 @@ select {
     margin-left: 90px;
     margin-right: 90px;
     cursor: pointer;
+    border-bottom: 1px solid transparent;
     transition: all 150ms ease-in;
 }
 
@@ -473,6 +476,7 @@ select {
     margin-left: 90px;
     margin-right: 90px;
     cursor: pointer;
+    border-bottom: 1px solid transparent;
     transition: all 150ms ease-in;
 }
 
@@ -486,38 +490,53 @@ select {
 #onglets-content {
     width: 100%;
     background-color: #F2F2F2;
+    margin-top: 10px;
 }
 
 #all-playlists {
-    width: 70%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid red;
+    text-align: center;
+}
+
+#center-all-floats {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .playlist-content {
-    margin: 20px;
+    margin: 40px 30px;
     float: left;
-    width: 300px;
+    width: 220px;
 }
 
 .playlist-figcaption {
     width: 100%;
     text-align: center;
-    border: 1px solid blue;
+    background-color: #EAE15E;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.title-playlist {
+    font-weight: bold;
+    font-size: 1.8rem;
 }
 
 .pochette-playlist {
-    border: 1px solid red;
     width: 100%;
-    height: 300px;
+    height: 220px;
+    border: 1px solid black;
 }
 
 .hover-playlist {
     opacity: 0.01;
     width: 100%;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.4);
+    height: 220px;
+    background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
     transition: opacity 150ms ease-in-out;
     color: white;
@@ -527,4 +546,14 @@ select {
 
 .hover-playlist:hover {
     opacity: 1;
+}
+
+.btn-redirect-playlist {
+    color: white;
+    font-size: 12rem;
+}
+
+.btn-redirect-playlist:hover {
+    color: white;
+    text-decoration: none;
 }

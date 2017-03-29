@@ -25,6 +25,8 @@ Route::get('/utilisateur/{id}', 'Welcome@utilisateur')->where('id','[0-9]+');
 Route::get("/playlist/nouvelle", "Welcome@playlist");
 Route::post("playlist/cree", "Welcome@creeplaylist");
 
+Route::get('/addtoplaylist/{plid}/{chid}', 'Welcome@addtoplaylist')->where('plid', '[0-9]+')->where('chid','[0-9]+');
+
 //creation upload
 Route::get("/chanson/nouvelle", "Welcome@formupload");
 Route::post("/chanson/cree", "Welcome@creechanson");

@@ -40,7 +40,7 @@
 
 <div id="onglets-content">
     <div id="all-playlists">
-        
+        <div id="center-all-floats">
         
         <div class="playlist-content">
             <figcaption class="playlist-figcaption">
@@ -53,16 +53,10 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+    
         
-        
+        </div>
     </div>
+    <div style="clear:both;"></div>
 </div>
-=======
-    </div>
 
-<script type="text/javascript">
-
-
-</script>
->>>>>>> 374a742ac86678b9b123b458b1d207cf1a163d9c
