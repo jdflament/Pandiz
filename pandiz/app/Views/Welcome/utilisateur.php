@@ -1,4 +1,4 @@
-<div id="banner-user" style="background: url('<?= $user->banner ?>'); background-size:cover; background-position: center; border:1px solid black;">
+<div id="banner-user" style="background: url('<?= $user->banner ?>'); background-size:cover; background-position: center;">
     <form id='formbanner'  method="post" enctype="multipart/form-data" action="/banner/cree">
         <input type="file" id="files-banner" name="upload-banner" class="hidden"/>
         <label for="files-banner" id="btn-add-banner" >Ajouter une bannière</label>
