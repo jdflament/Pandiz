@@ -49,7 +49,6 @@ this content can be changed in <code>/app/Views/Welcome/Welcome.php</code>');
         $c->save();*/
         }
         
-
         return View::make('Welcome/Welcome')
             ->shares('title', __('Welcome'))
             ->with('welcomeMessage', $message)
@@ -61,6 +60,7 @@ this content can be changed in <code>/app/Views/Welcome/Welcome.php</code>');
     
     public function formupload()
     {
+
         return View::make('Welcome/formupload')
             ->shares('title', 'nouvelle');
     }
@@ -101,6 +101,38 @@ this content can be changed in <code>/app/Views/Welcome/Welcome.php</code>');
         
         echo "</pre>";
         die(1);
+    }
+    
+    public function avatar() {
+        if(Input::hasFile('upload-photo-profil') && 
+           Input::file('upload-photo-profil')->isValid()){
+            
+            $profil = Input::file('upload-photo-profil')->getClientOriginalName();
+            $p = Input::file('upload-photo-profil')->move('assets/images/'.Auth::user()->username,$profil);
+            Auth::user()->avatar ="/".$p;
+            Auth::user()->save();
+
+            return Redirect::to('/utilisateur/'.Auth::id());
+            
+        } else {
+            Auth::user()->avatar = "assets/images/avatarbase.jpg";
+        }
+    }
+    
+     public function banner() {
+        if(Input::hasFile('upload-banner') && 
+           Input::file('upload-banner')->isValid()){
+            
+            $banner = Input::file('upload-banner')->getClientOriginalName();
+            $b = Input::file('upload-banner')->move('assets/images/'.Auth::user()->username,$banner);
+            Auth::user()->banner ="/".$b;
+            Auth::user()->save();
+
+            return Redirect::to('/utilisateur/'.Auth::id());
+            
+        } else {
+            Auth::user()->banner = "assets/images/banneruserbase.png";
+        }
     }
 
     /**
