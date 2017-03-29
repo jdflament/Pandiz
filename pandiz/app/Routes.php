@@ -19,7 +19,10 @@ Route::get('about', 'Welcome@about');
 Route::get('/param/{id}', 'Welcome@param')->where('id','[0-9]+');
 
 //Mon profil
-Route::get('/profil', 'Welcome@profil');
+Route::get('/utilisateur/{id}', 'Welcome@utilisateur')->where('id','[0-9]+');
+
+//Création playlist
+Route::post("playlist/cree", "Welcome@creeplaylist");
 
 //creation upload
 Route::get("/chanson/nouvelle", "Welcome@formupload");

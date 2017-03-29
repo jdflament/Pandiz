@@ -13,7 +13,6 @@
         <select id="select-filter" onChange="recup()">
             <option id="nouveautes" selected="selected">Nouveautés</option>
             <option id="top20">Top 20</option>
-            <option id="tendances">Tendances</option>
         </select>
     </div>
 
@@ -26,32 +25,12 @@
         <i class="icon fa fa-chevron-down chevron-down-right"></i>
         <form method="post" action="/">
         <select name="style" id="select-genre" onchange="this.form.submit()">
+            
             <?php
             foreach($touslesstyles as $st) {
                 echo "<option ".($style==$st?"selected":"").">$st</option>";
             }?>
-            
-            
-            <!--<option id="tous">Tous</option>
-            <option id="pop">POP</option>
-            <option id="rock">Rock</option>
-            <option id="electronic">Electronic</option>
-            <option id="jazz">Jazz</option>
-            <option id="hiphop">Hip-Hop</option>
-            <option id="indie">Indie</option>
-            <option id="soundtrack">Soundtrack</option>
-            <option id="classique">Classique</option>
-            <option id="chillout">Chillout</option>
-            <option id="ambient">Ambient</option>
-            <option id="folk">Folk</option>
-            <option id="metal">Metal</option>
-            <option id="funk">Funk</option>
-            <option id="rnb">RNB</option>
-            <option id="punk">Punk</option>
-            <option id="reggae">Reggae</option>
-            <option id="country">Country</option>
-            <option id="house">House</option>
-            <option id="dubstep">Dubstep</option>-->
+
         </select>
         </form>
     </div>
@@ -71,7 +50,7 @@
             
             <td class="table-music-titre-content"><?php 
                           echo "<div class='album-cover-content'><img class='album-cover' src='$c->fichier2' alt='pochette' style='width: 150px; height: auto;'/></div>"; 
-                          echo "<div class='song-user-content'>" . "<p class='artist-username'>" . $c->utilisateur->username. "</p>" . "<p class='song-name'>" . $c->nom ."</p>"  . "<p class='song-duration'>" . $c->duree . " - " . $c->style . "</p></div>";
+                          echo "<div class='song-user-content'>" . "<a class='artist-username' href='/utilisateur/".$c->utilisateur_id."'>" . $c->utilisateur->username. "</a>" . "<p class='song-name'>" . $c->nom ."</p>"  . "<p class='song-duration'>" . $c->duree . " - " . $c->style . "</p></div>";
             ?></td>
             
             <td class="table-music-actions-content"><?php echo "<a href='#' class='listen' data-file='$c->fichier'><i class='fa fa-play fa-2x'></i></a><a href='#' class='pause' data-file='$c->fichier'><i class='fa fa-pause fa-2x'></i></a>"; ?></td>

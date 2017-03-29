@@ -1,1 +1,0 @@
-<p>Vous êtes sur le profil de <?= $users->username; ?> !</p>
