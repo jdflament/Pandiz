@@ -22,6 +22,7 @@ route::get('/param/{id}', 'Welcome@param')->where('id','[0-9]+');
 Route::get('/utilisateur/{id}', 'Welcome@utilisateur')->where('id','[0-9]+');
 
 //Création playlist
+Route::get("/playlist/nouvelle", "Welcome@playlist");
 Route::post("playlist/cree", "Welcome@creeplaylist");
 
 //creation upload

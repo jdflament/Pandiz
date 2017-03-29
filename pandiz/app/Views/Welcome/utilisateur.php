@@ -19,16 +19,37 @@
 <div style="clear:both;"></div>
 
 <div id="onglets-utilisateur">
-        <div id="informations-utilisateur">
-            <p>Informations</p>
-        </div>
-        <div id="playlists-utilisateur">
-            <p>Playlists</p>
-        </div>
-        <div id="titres-utilisateur">
-            <p>Titres</p>
-        </div>
-        <div id="albums-utilisateur">
-            <p>Albums</p>
-        </div>
+    <div id="informations-utilisateur">
+        <p>Informations</p>
     </div>
+    <div id="playlists-utilisateur">
+        <p>Playlists</p>
+    </div>
+    <div id="titres-utilisateur">
+        <p>Titres</p>
+    </div>
+    <div id="albums-utilisateur">
+        <p>Albums</p>
+    </div>
+</div>
+
+
+<div id="onglets-content">
+    <div id="all-playlists">
+        
+        
+        <div class="playlist-content">
+            <figcaption class="playlist-figcaption">
+                <h4 class="title-playlist">"Ma playlist"</h4>
+                <p class="playlist-nb-titres">8 titres</p>
+            </figcaption>
+            <div class="pochette-playlist">
+                <div class="hover-playlist">
+                    <a href="" class="btn-redirect-playlist">+</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>

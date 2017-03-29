@@ -154,18 +154,31 @@ This content can be changed in <code>/app/Views/Welcome/SubPage.php</code>');
         
     }
     
+    public function playlist()
+    {
+        return View::make('Welcome/playlist')
+            ->shares('title', 'nouvelle');
+    }
+    
     public function creeplaylist() {
         $p = new Playlist();
-        $p->nom = Input::get('playlist');
+        $p->nom = Input::get('nom');
         $p->utilisateur_id = Auth::id();
+        if(Input::hasFile('pochette') && Input::file('pochette')->isValid()) {
+            $file2 = Input::file('pochette')->getClientOriginalName();
+            $f2 = Input::file('pochette')->move('assets/images/'.Auth::user()->username,$file2);
+            $p->pochette = "/".$f2;
+        } else 
+            $p->pochette = "/assets/images/playlistbase.png";
+        
         $p->save();
         
-        
+        Return Redirect::to("/");
         if (Request::ajax()) {
             $playlists =
                 Playlist::whereRaw('utilisateur_id=?', array(Auth::id()))->get();
-            return View::fetch('Welcome/playlists',
-                array('playlists' => $playlists));
+            return View::fetch('Welcome/playlist',
+                array('playlist' => $playlists));
             
         }
     }
