@@ -65,8 +65,8 @@ echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
     <div id="menu-open-content">
         <a class="menu-button" href="/">ACCUEIL</a>
         <?php if(Auth::id()){
-            echo "<a class='menu-button' href=/utilisateur/".Auth::id().">MON PROFIL</a>";} ?>
-        <a class="menu-button" href="">MA PLAYLIST</a>
+            echo "<a class='menu-button' href=/utilisateur/".Auth::id().">MON PROFIL</a>
+                  <a class='menu-button' href=''>MA PLAYLIST</a>";} ?>
         <a class="menu-button" href="">CONTACT</a>
         <a class="menu-button" href="/about">À PROPOS</a>
     </div>
