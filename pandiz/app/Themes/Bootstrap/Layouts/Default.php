@@ -4,6 +4,7 @@ Assets::js([
     vendor_url('dist/js/bootstrap.min.js', 'twbs/bootstrap'),
     theme_url('css/functions.js', 'Bootstrap'),
 ]);
+//use Nova\Support\Facades\Auth;
 
 echo isset($js) ? $js : ''; // Place to pass data / plugable hook zone
 
@@ -64,9 +65,9 @@ echo isset($css) ? $css : ''; // Place to pass data / plugable hook zone
     <img id="cross-icon" src="<?= theme_url('images/cross-icon.png', 'Bootstrap'); ?>" />
     <div id="menu-open-content">
         <a class="menu-button" href="/">ACCUEIL</a>
-        <?php if(Auth::id()){
+        <?php /*if(Auth::id()){
             echo "<a class='menu-button' href=/utilisateur/".Auth::id().">MON PROFIL</a>
-                  <a class='menu-button' href=''>MA PLAYLIST</a>";} ?>
+                  <a class='menu-button' href=''>MA PLAYLIST</a>";} */?>
         <a class="menu-button" href="">CONTACT</a>
         <a class="menu-button" href="/about">À PROPOS</a>
     </div>
