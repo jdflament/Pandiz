@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
-    $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
-    $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
-    $vendorDir . '/nova-framework/system/scripts/helpers.php',
+    '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+    '667aeda72477189d0494fecd327c3641' => $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
+    '2c102faa651ef8ea5874edb585946bce' => $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
+    'b37094800a81f58db49ead993a1f253a' => $vendorDir . '/nova-framework/system/scripts/helpers.php',
 );
