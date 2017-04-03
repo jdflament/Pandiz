@@ -11,5 +11,3 @@ return array(
     '2c102faa651ef8ea5874edb585946bce' => $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
     'b37094800a81f58db49ead993a1f253a' => $vendorDir . '/nova-framework/system/scripts/helpers.php',
 );
-
-
