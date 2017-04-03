@@ -25,11 +25,7 @@ return array(
         'mysql' => array(
             'driver'    => 'mysql',
             'hostname'  => 'localhost',
-<<<<<<< HEAD
             'database'  => 'pandiz',
-=======
-            'database'  => 'pandiz2',
->>>>>>> e3c05009775c5a6a5a14790f78eb91bbe9d5e71c
             'username'  => 'root',
             'password'  => 'root',
             'prefix'    => PREFIX,
