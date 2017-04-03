@@ -358,6 +358,7 @@ select {
 #banner-user {
     width: 100%;
     text-align: center;
+    height: 50vh;
 }
 
 #btn-add-banner {
@@ -365,8 +366,10 @@ select {
     border-radius: 5px;
     box-shadow: 1px 1px 5px grey;
     padding: 7px 50px;
-    margin: 20vh 10vh;
+    margin: 25vh 10vh;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s;
 }
 
 #profil-photo-name {

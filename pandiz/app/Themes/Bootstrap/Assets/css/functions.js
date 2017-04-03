@@ -36,6 +36,17 @@ $(document).ready(function() {
         $('#formbanner').submit();
     });
 
+    $('#banner-user').mouseenter(function(){
+        $('#btn-add-banner').css({
+            'opacity' : '1',
+        });
+    });
+
+    $('#banner-user').mouseleave(function(){
+        $('#btn-add-banner').css({
+            'opacity' : '0',
+        });
+    });
     
 });
 
