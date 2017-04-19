@@ -20,7 +20,7 @@
     <?php
             
 
-    $touslesstyles = array("tous", "pop" , "rock", "electronic", "jazz", "hiphop", "indie", "soundtrack", "classique", "chillout", "ambient", "folk", "metal", "funk", "rnb", "punk", "reggae", "country", "house", "dubstep");?>
+    $touslesstyles = array("tous", "pop" , "rock", "electronic", "jazz", "hiphop", "indie", "soundtrack", "classique", "chillout", "ambient", "folk", "metal", "funk", "rap", "rnb", "punk", "reggae", "country", "house", "dubstep");?>
     <div class="section-select">
         <i class="icon fa fa-chevron-down chevron-down-right"></i>
         <form method="post" action="/">
